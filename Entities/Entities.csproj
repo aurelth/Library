@@ -40,12 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CountryBE.cs" />
-    <Compile Include="DepartmentBE.cs" />
-    <Compile Include="EmployeeBE.cs" />
-    <Compile Include="JobBE.cs" />
-    <Compile Include="JobHistBE.cs" />
-    <Compile Include="LocationBE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegionBE.cs" />
   </ItemGroup>

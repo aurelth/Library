@@ -117,7 +117,6 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
-    <Content Include="CadastroRegions.aspx" />
     <Content Include="Content\Cadastro.css" />
     <Content Include="Content\PainelSistema.css" />
     <Content Include="Content\Site.css" />
@@ -207,13 +206,6 @@
     <Content Include="Tabelas\TableCSharpJobs.aspx" />
     <Content Include="Tabelas\TableCSharpLocations.aspx" />
     <Content Include="Tabelas\TableCSharpRegions.aspx" />
-    <Content Include="tbCountries.aspx" />
-    <Content Include="tbDepartments.aspx" />
-    <Content Include="tbEmployees.aspx" />
-    <Content Include="tbJobHist.aspx" />
-    <Content Include="tbJobs.aspx" />
-    <Content Include="tbLocations.aspx" />
-    <Content Include="tbRegions.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
@@ -271,13 +263,6 @@
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="CadastroRegions.aspx.cs">
-      <DependentUpon>CadastroRegions.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CadastroRegions.aspx.designer.cs">
-      <DependentUpon>CadastroRegions.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Controles\DataTableConversor.cs" />
     <Compile Include="Tabelas\TableCSharpCountries.aspx.cs">
       <DependentUpon>TableCSharpCountries.aspx</DependentUpon>
@@ -346,55 +331,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="tbCountries.aspx.cs">
-      <DependentUpon>tbCountries.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="tbCountries.aspx.designer.cs">
-      <DependentUpon>tbCountries.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="tbDepartments.aspx.cs">
-      <DependentUpon>tbDepartments.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="tbDepartments.aspx.designer.cs">
-      <DependentUpon>tbDepartments.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="tbEmployees.aspx.cs">
-      <DependentUpon>tbEmployees.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="tbEmployees.aspx.designer.cs">
-      <DependentUpon>tbEmployees.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="tbJobHist.aspx.cs">
-      <DependentUpon>tbJobHist.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="tbJobHist.aspx.designer.cs">
-      <DependentUpon>tbJobHist.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="tbJobs.aspx.cs">
-      <DependentUpon>tbJobs.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="tbJobs.aspx.designer.cs">
-      <DependentUpon>tbJobs.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="tbLocations.aspx.cs">
-      <DependentUpon>tbLocations.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="tbLocations.aspx.designer.cs">
-      <DependentUpon>tbLocations.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="tbRegions.aspx.cs">
-      <DependentUpon>tbRegions.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="tbRegions.aspx.designer.cs">
-      <DependentUpon>tbRegions.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

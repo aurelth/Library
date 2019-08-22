@@ -1,12 +1,11 @@
 ﻿using Entities;
-using Interfaces;
 using Oracle.DataAccess.Client;
 using System.Collections.Generic;
 using System.Data;
 
 namespace DAO
 {
-    public class RegionDAO:BaseDAO<RegionDAO>, IRegion
+    public class RegionDAO : BaseDAO<RegionDAO>
     {
         public List<RegionBE> ObterRegion()
         {

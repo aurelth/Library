@@ -39,13 +39,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ICountry.cs" />
-    <Compile Include="IDepartment.cs" />
-    <Compile Include="IEmployee.cs" />
-    <Compile Include="IJob.cs" />
-    <Compile Include="IJobHist.cs" />
-    <Compile Include="ILocation.cs" />
-    <Compile Include="IRegion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

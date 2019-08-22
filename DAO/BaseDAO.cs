@@ -15,8 +15,6 @@ namespace DAO
             get { return ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString; }
         }
 
-
-
         protected TVal ObterValor<TVal>(object valor)
         {
             return ObterValor<TVal>(valor, default(TVal));
