@@ -1,0 +1,230 @@
+﻿/*Painel Sistema*/
+
+td.cssNome {
+    line-height: 130% ;
+}
+
+/*cabecalhos*/
+
+.cssCabecalhos {
+    background-color: mediumblue ;
+    color: white ;
+}
+
+.LinkRapidobtn {
+    background-color: mediumblue ;
+    color: white ;
+    border-bottom: 2px solid black ;
+    font-size: 20px ;
+}
+
+/*Geografia*/
+
+.PainelCompleto {
+    padding-top: 10px ;
+}
+
+.labelGeo {
+    font-size: 34px ;
+    font-weight: bold ;
+    font-family: Aparajita ;
+    margin: 150px ;
+}
+
+.Geografia {
+    border: 2px solid black ;
+    width: 350px ;
+    margin-left: 110px ;
+    margin-top: 20px ;
+    margin-bottom: 20px ;
+}
+
+.lblgeografia {
+    text-align: center ;
+    font-family: Calibri ;
+    font-weight: bold ;
+    font-size: 20px ;
+}
+
+.PainelGeografia {
+    border-top: 4px solid black ;
+    padding-top: 10px ;
+    border-bottom: 3px solid black ;
+    padding-bottom: 10px ;
+    width: 350px ;
+    overflow: auto ;
+    max-height: 200px ;
+}
+
+.PainelGeografia2 {
+    border-top: 4px solid black;
+    padding-top: 10px;
+    border-bottom: 3px solid black;
+    padding-bottom: 10px;
+    width: 350px;
+    overflow: auto;
+    max-height: 200px;
+}
+
+.Grid {
+    text-align: center;
+}
+
+/*Links*/
+
+.linkOverflow {
+    overflow: auto;
+    max-height: 90%;
+    padding-top: 4px;
+    line-height: 160%;
+    border-top: 2px solid black;
+}
+
+.PainelLinks {
+    border: 2px solid black;
+    text-align: left;
+    float: right;
+    margin-right: 270px;
+    margin-top: 20px;
+    width: 350px;
+    height: 307px;
+    border-bottom: 5px solid black;
+}
+
+.CabecalhoLinks {
+    float: left;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+a.txtLinks {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+
+.btnLink {
+    background-color: transparent;
+    border-color: transparent;
+    float: right;
+    width: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.PainelLinks table th {
+    border-bottom: 2px solid black;
+    width: 350px;
+}
+
+.btnSalvar {
+    margin-left: 60%;
+    margin-top: 10px;
+    background-color: mediumblue;
+    color: white;
+    height: 25px;
+    width: 60px;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.txtLinks {
+    padding-left: 25px;
+}
+
+/*Recursos Humanos*/
+
+.lblRecursosHumanos {
+    font-size: 40px;
+    font-family: 'Footlight MT';
+    font-weight: bold;
+    margin-left: 110px;
+}
+
+.lblOcupacaoEmp {
+    text-align: center;
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.RecursosHumanos {
+    border: 2px solid black;
+    width: 350px;
+    margin-left: 110px;
+    margin-top: 40px;
+}
+
+.EmpregadoStatus {
+    border-top: 4px solid black;
+    padding-top: 10px;
+    border-bottom: 3px solid black;
+    padding-bottom: 10px;
+    width: 350px;
+    height: 195px;
+    overflow: auto;
+    max-height: 200px;
+}
+
+/*Departamentos*/
+
+.lblDepartmentos {
+    font-size: 20px;
+    font-family: Calibri;
+    font-weight: bold;
+}
+
+.EmpregadoSetorPricipal {
+    border: 2px solid black;
+    width: 350px;
+    height: 250px;
+    float: right;
+    margin: 80px;
+    margin-right: 270px;
+}
+
+.EmpregadoSetor {
+    border-top: 4px solid black;
+    padding-top: 10px;
+    border-bottom: 3px solid black;
+    padding-bottom: 10px;
+    width: 350px;
+    overflow: auto;
+    max-height: 200px;
+}
+
+/*Empregados Ativos e Inativos*/
+
+.cssQTDInativo {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.cssqtdativo {
+    padding-left: 30px;
+}
+
+.cssQTDRegiao {
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 105px;
+}
+
+
+.cssQTDPais {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.cssQtdDept {
+    text-align: right;
+    padding-right: 15px;
+}
+
+.cssNome {
+    text-align: left;
+    padding-left: 10px;
+}

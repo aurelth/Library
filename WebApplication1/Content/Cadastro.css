@@ -1,0 +1,119 @@
+﻿fieldset {
+    border:1px solid #808080;
+     font-weight:bolder;
+     color:black;
+     text-align:center;
+     width:480px;
+     border-radius:10px;
+}
+
+.textespacamento {
+    margin-bottom:4px;
+}
+
+.btnenviar {
+    clear: both;
+    text-align:center;
+}
+
+.txtcaixasdetexto {
+    padding-top:8px;
+}
+
+.dropdowlist {
+    Width:307px; 
+    Height:27px;
+    margin-bottom:4px;
+}
+
+
+/*countries*/
+
+
+
+.lblCountries {
+    float:left;
+    margin-left:8px;
+}
+
+
+.lbllabelcountries {
+    padding-top:8px;
+    padding-bottom:8px;
+}
+
+
+/*departments*/
+
+.lblDepartments {
+    float: left; 
+   line-height: 160%;
+   margin-left:8px;
+}
+
+.lbllabeldepartments {
+     padding-top:8px;
+    padding-bottom:4px;
+}
+
+
+/*employees*/
+.lblemployees {
+    float: left;
+    line-height: 160%;
+    margin-left:8px;
+}
+
+.lbllabelemployees {
+    padding-top:10px;
+    padding-bottom:0.6px;
+}
+
+
+
+
+
+/*Jobs*/
+
+
+.lblJobs {
+    float: left; 
+    line-height: 160%;
+    margin-left:8px;
+}
+
+.lbllabeljobs {
+    padding-top:8px;
+    padding-bottom:4px;
+}
+
+
+/*locationd*/
+
+
+.lblLocations{
+    float: left;
+    line-height: 160%;
+    margin-left:8px;
+}
+
+.lbllabellocations {
+    padding-top:8px;
+    padding-bottom:3px;
+}
+
+
+/*Regions*/
+
+
+.lblRegions {
+    float: left; 
+    line-height: 160%;
+    margin-left:8px;
+}
+
+.lbllabelregion {
+    padding-top:8px;
+    padding-bottom:8px;
+
+}

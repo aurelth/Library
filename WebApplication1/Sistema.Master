@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Sistema.master.cs" Inherits="WebApplication1.Sistema" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title><%: Page.Title %> - Minhas Tabelas</title>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <asp:PlaceHolder runat="server">
+        <script src="<%: ResolveUrl("~/Scripts/modernizr-2.6.2.js") %>"></script>
+
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+        <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+        <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+
+    </asp:PlaceHolder>
+    <meta name="viewport" content="width=device-width" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="jquery.ui.combined" />
+            </Scripts>
+        </asp:ScriptManager>
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p class="site-title"><a runat="server" href="~/">Página Inicial</a></p>
+                </div>
+                <div class="clear-fix"></div>
+            </div>
+        </header>
+        <div id="body">
+            <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+                <div class="content-wrapper main-content clear-fix" style="margin-left:60px;" >
+                    <asp:Menu ID="menuprincipal" runat="server" Orientation="Horizontal" CssClass="MenuMaster">
+                        <Items>
+                            <asp:MenuItem Text="Regions">
+                                <asp:MenuItem Text="Listar" NavigateUrl="~/tbRegions.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Tabela" NavigateUrl="~/Tabelas/TableCSharpRegions.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Countries">
+                                <asp:MenuItem Text="Listar" NavigateUrl="~/tbCountries.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Tabela" NavigateUrl="~/Tabelas/TableCSharpCountries.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Locations">
+                                <asp:MenuItem Text="Listar" NavigateUrl="~/tbLocations.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Tabela" NavigateUrl="~/Tabelas/TableCSharpLocations.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Departments">
+                                <asp:MenuItem Text="Listar" NavigateUrl="~/tbDepartments.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Tabela" NavigateUrl="~/Tabelas/TableCSharpDepartment.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Jobs">
+                                <asp:MenuItem Text="Listar" NavigateUrl="~/tbJobs.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Tabela" NavigateUrl="~/Tabelas/TableCSharpJobs.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Employees">
+                                <asp:MenuItem Text="Listar" NavigateUrl="~/tbEmployees.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Tabela" NavigateUrl="~/Tabelas/TableCSharpEmployees.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Historic">
+                                <asp:MenuItem Text="Listar" NavigateUrl="~/tbJobHist.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Tabela" NavigateUrl="~/Tabelas/TableCSharpJobHist.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                    <asp:ValidationSummary ID="vlGeral" runat="server" />
+                    <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+                </div>
+            </div>
+        
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; <%: DateTime.Now.Year %> - Minhas Tabelas</p>
+                </div>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
+
