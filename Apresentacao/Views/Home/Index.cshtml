@@ -1,12 +1,14 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Home Page";   
+
+    
 }
 
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>LIVROS DA LIVRARIA</title>
+    <title>LIVRARIA FANTASMA</title>
     <style>
         * {
             box-sizing: border-box;
@@ -14,7 +16,7 @@
 
         html, body {
             margin: 0;
-            padding: 0;
+            padding: 0;            
         }
 
         ul {
@@ -31,7 +33,7 @@
         }
 
             li a:hover {
-                background-color: #154360;
+                background-color: beige;
             }
 
         nav {
@@ -45,18 +47,23 @@
             height: 100px;
             background: #CB4335;
             position: relative;
+            
         }
 
         section {
             width: 100%;
             height: 900px;
             background-color: #9A7D0A;
+            padding-top: 1px;
+           
         }
 
         footer {
             width: 100%;
             height: 70px;
             background: #7E5109;
+            text-align:center;
+            text-decoration-style:dotted;
         }
     </style>
 </head>
@@ -66,8 +73,18 @@
             <ul>
                 <li><a href="home">Home</a></li>
                 <li><a href="livros">Livros</a></li>
-                <li><a href="Emprestar">Como Emprestar</a></li>
+                <li><a href="Emprestar">Emprestar</a></li>
+                <li><a href="reservar">Reservar</a></li>
                 <li><a href="contatos">Contatos</a></li>
+            </ul>
+
+            <ul>
+                @foreach (var livro in ViewBag.Livros)
+                {
+                    <li>livro.categoria</li>
+                    <li>livro.titulo</li>
+                    <li>livro.numero_de_serie</li>
+                }
             </ul>
         </nav>
     </header>
@@ -77,6 +94,6 @@
             <li></li>
         </ul>
     </section>
-    <footer></footer>
+    <footer>Copyright Livraria Fantasma</footer>
 </body>
 </html>
