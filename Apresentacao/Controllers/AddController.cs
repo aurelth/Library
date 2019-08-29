@@ -6,16 +6,12 @@ using System.Web.Mvc;
 
 namespace Apresentacao.Controllers
 {
-    public class HomeController : Controller
+    public class AddController : Controller
     {
-        //public ActionResult Index()
-        //{
-        //    return View();
-        //}
-
+        // GET: Add
         public ActionResult Index()
         {
-            return Content("<h1>My first view page</h1>");
+            return View();
         }
     }
 }
