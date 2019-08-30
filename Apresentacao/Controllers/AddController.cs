@@ -11,7 +11,11 @@ namespace Apresentacao.Controllers
         // GET: Add
         public ActionResult Index()
         {
-            return View();
+            return Content("I've just created another controller.");
+        }
+        public ActionResult AddBook(int id)
+        {
+            return Content("Add a book with the id " + id);
         }
     }
 }
