@@ -8,15 +8,26 @@ namespace Apresentacao.Controllers
 {
     public class HomeController : Controller
     {
-        //public ActionResult Index()
-        //{
-        //    return View();
-        //}
-
         public ActionResult Index()
         {
-            ViewBag.library = "Creating a library for my first ASP.Net project.";
             return View();
         }
+
+        public ActionResult Program()
+        {            
+            return View();
+        }
+
+        public ActionResult About()
+        {
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            return View();
+        }
+
+
     }
 }

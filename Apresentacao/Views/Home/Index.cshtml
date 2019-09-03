@@ -61,26 +61,28 @@
             height: 70px;
             background: #7E5109;
             text-align:center; 
-            padding-top: 10px;
+            padding-top: 10px;       
         }
+
     </style>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="Home">Home</a></li>
+                <li><a href="@Url.Action("Index", "Home")">Home</a></li>
                 <li><a href="@Url.Action("Index", "Book")">Books</a></li>
                 <li><a href="Borrow">Borrow</a></li>
                 <li><a href="Book">Book a book</a></li>
-                <li><a href="Book">Programs</a></li>
-                <li><a href="Book">About Us</a></li>
-                <li><a href="Contacts">Contacts</a></li>
+                <li><a href="@Url.Action("Program", "Home")">Program</a></li>
+                <li><a href="@Url.Action("About", "Home")">About</a></li>
+                <li><a href="@Url.Action("Contact", "Home")">Contact</a></li>
             </ul>           
         </nav>
     </header>
     <section>
-        @*<img src="~/fonts/"*@
+        <img src="~/Pictures/George-Peabody-Library-E665TT.jpg" />
+
         <h2>Our mission is to provide you the best Books you need for anything you need them for.</h2>
 
         <h2>We also want to provide you the best experience ever.</h2>
