@@ -15,7 +15,8 @@ namespace Apresentacao.Controllers
 
         public ActionResult Index()
         {
-            return Content("<h1>Wellcome Aurel to your first view page.</h1>");
+            ViewBag.library = "Creating a library for my first ASP.Net project.";
+            return View();
         }
     }
 }

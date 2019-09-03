@@ -1,7 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Home Page";   
-
-    
+    ViewBag.Title = "Home Page";       
 }
 
 <!DOCTYPE html>
@@ -38,14 +36,14 @@
 
         nav {
             width: 100%;
-            height: 50px;
+            height: 100px;
             background-color: darkcyan;
         }
 
         header {
             width: 100%;
             height: 100px;
-            background: #CB4335;
+            /*background: #CB4335;*/
             position: relative;
             
         }
@@ -62,7 +60,8 @@
             width: 100%;
             height: 70px;
             background: #7E5109;
-            text-align:center;            
+            text-align:center; 
+            padding-top: 10px;
         }
     </style>
 </head>
@@ -71,15 +70,22 @@
         <nav>
             <ul>
                 <li><a href="Home">Home</a></li>
-                <li><a href="Books">Books</a></li>
+                <li><a href="@Url.Action("Index", "Book")">Books</a></li>
                 <li><a href="Borrow">Borrow</a></li>
                 <li><a href="Book">Book a book</a></li>
+                <li><a href="Book">Programs</a></li>
+                <li><a href="Book">About Us</a></li>
                 <li><a href="Contacts">Contacts</a></li>
             </ul>           
         </nav>
     </header>
     <section>
-        <h2>Books Data</h2>
+        @*<img src="~/fonts/"*@
+        <h2>Our mission is to provide you the best Books you need for anything you need them for.</h2>
+
+        <h2>We also want to provide you the best experience ever.</h2>
+
+        <h2>For more details, click on the session programs to see all our available programs that can help you further your knowledge in any area.</h2>
         @*<ul>
             @foreach (var livro in ViewBag.Livros)
             {
