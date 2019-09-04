@@ -14,23 +14,23 @@ namespace Apresentacao.Controllers
             return View();
         }
 
-        public ActionResult EditBook(int id)
+        public ActionResult Edit(int id)
         {
             return View();
         }
        
 
-        public ActionResult DeleteBook(int id)
+        public ActionResult Delete(int id)
         {
             return View();
         }
 
-        public ActionResult BorrowBook(int id)
+        public ActionResult Borrow(int id)
         {
             return View();
         }
 
-        public ActionResult BookBook(int id)
+        public ActionResult Book(int id)
         {
             return View();
         }
