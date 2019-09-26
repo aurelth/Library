@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,11 @@ namespace Apresentacao.Controllers
 {
     public class BookController : Controller
     {
-       
+
         public ActionResult Index()
         {
+            var bookBO = new BookBO();
+            ViewBag.BooksList = bookBO.BookList();
             return View();
         }
 
@@ -18,7 +21,7 @@ namespace Apresentacao.Controllers
         {
             return View();
         }
-       
+
 
         public ActionResult Delete(int id)
         {
