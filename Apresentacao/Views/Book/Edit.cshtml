@@ -1,4 +1,4 @@
-﻿
+﻿@model Entities.BookBE
 @{
     ViewBag.Title = "Edit";
 }
@@ -23,22 +23,22 @@
 <body>
     <div class="container">
         <h1>Book Information</h1>
-        <form>
+        <form method="post" action="@Url.Action("Edit", "Book")">
             <div class="form-group">
-                <label for="formGroupExampleInput">ID</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Id">
+                <input hidden name="Id" value="@Model.Id" />
             </div>
             <div class="form-group">
                 <label for="formGroupExampleInput2">TITLE</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Title">
+                @*@Html.TextBoxFor(model => model.Title)*@
+                <input type="text" class="form-control" id="Title" name="Title" placeholder= "Title" value="@Model.Title">
             </div>
             <div class="form-group">
                 <label for="formGroupExampleInput2">AUTHOR</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Author">
+                <input type="text" class="form-control" id="Author" name="Author" placeholder="Author" value="@Model.Author">
             </div>
             <div class="form-group">
                 <label for="formGroupExampleInput2">GENRE</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Genre">
+                <input type="text" class="form-control" id="Genre" name="Genre" placeholder="Genre" value="@Model.Genre">
             </div>
             <button type="submit" class="btn btn-warning">Submit</button>
         </form>

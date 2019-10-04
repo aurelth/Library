@@ -170,6 +170,7 @@
     <Content Include="Views\Book\Edit.cshtml" />
     <Content Include="Views\Book\Borrow.cshtml" />
     <Content Include="Views\Book\Book.cshtml" />
+    <Content Include="Views\Book\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

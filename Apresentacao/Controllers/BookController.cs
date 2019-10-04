@@ -1,4 +1,5 @@
 ﻿using BO;
+using Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,14 +18,15 @@ namespace Apresentacao.Controllers
             return View();
         }
 
-        public ActionResult Edit(int id)
+        public void Edit(BookBE bookBE)
         {
-            return View();
+            BookBO bookBO = new BookBO();           
+            bookBO.EditBook(bookBE);
         }
 
 
         public ActionResult Delete(int id)
-        {
+        {   
             return View();
         }
 
@@ -38,6 +40,19 @@ namespace Apresentacao.Controllers
             return View();
         }
 
+
+        public ActionResult OpenEdit(int id)
+        {
+            BookBO bookBO = new BookBO();
+            var book = bookBO.GetBookById(id);   
+            
+            return View("Edit", book);
+        }
+
+        public ActionResult Add(BookBE bookBE)
+        {
+            return View();
+        }
 
     }
 }

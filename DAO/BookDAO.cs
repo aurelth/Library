@@ -15,7 +15,7 @@ namespace DAO
             OracleConnection conn = new OracleConnection(oradb);
             conn.Open();
 
-            string sql = "SELECT * FROM BOOKS";
+            string sql = "SELECT * FROM BOOKS ORDER BY TITLE ASC";
 
             OracleCommand cmd = new OracleCommand(sql, conn);
             cmd.CommandType = CommandType.Text;
@@ -44,18 +44,48 @@ namespace DAO
             OracleConnection conn = new OracleConnection(oradb);
             conn.Open();
 
-            StringBuilder builder = new StringBuilder();
-            builder.Append("UPDATE BOOKS");
-            builder.Append($" SET TITLE = {bookBE.Title}");
-            builder.Append($" SET AUTHOR = {bookBE.Author}");
-            builder.Append($" SET GENRE = {bookBE.Genre}");
-            builder.Append($" WHERE SET ID = {bookBE.Id}");
-            builder.Append(" COMMIT");
+            StringBuilder sb = new StringBuilder();
+            sb.Append("UPDATE BOOKS");            
+            sb.Append($" SET TITLE = '{bookBE.Title}',");
+            sb.Append($" AUTHOR = '{bookBE.Author}',");
+            sb.Append($" GENRE = {(int)bookBE.Genre}");
+            sb.Append($" WHERE ID = {bookBE.Id}");
 
-            OracleCommand cmd = new OracleCommand(builder.ToString(), conn);
-            cmd.CommandType = CommandType.Text;
+            OracleCommand cmd = new OracleCommand(sb.ToString(), conn);
+         cmd.CommandType = CommandType.Text;
 
             cmd.ExecuteNonQuery();
         }
+
+        public BookBE GetBookById(int id)
+        {
+            OracleConnection conn = new OracleConnection(oradb);
+            conn.Open();
+
+            string sql = @"SELECT *
+                            FROM BOOKS
+                            WHERE ID = " + id;
+
+            OracleCommand cmd = new OracleCommand(sql, conn);
+            cmd.CommandType = CommandType.Text;
+
+            OracleDataReader dr = cmd.ExecuteReader();
+
+            BookBE book = new BookBE();
+            while (dr.Read())
+            {                
+                book.Id = ObterValor<long>(dr["ID"]);
+                book.Title = ObterValor<string>(dr["TITLE"]);
+                book.Author = ObterValor<string>(dr["AUTHOR"]);
+                book.Genre = (GenreEnum)ObterValor<int>(dr["GENRE"]);               
+            }
+
+            conn.Dispose();
+
+            return book;
+        }
     }
+
+    
 }
+
