@@ -15,6 +15,13 @@ namespace BO
 
         public BookBE GetBookById(int id)
             => BookDAO.GetInstance().GetBookById(id);
-               
+
+        public void AddBook(BookBE bookBE)
+            => BookDAO.GetInstance().AddBook(bookBE);
+
+        public void DeleteBook(BookBE bookBE)
+            => BookDAO.GetInstance().DeleteBook(bookBE);
+
+
     }
 }

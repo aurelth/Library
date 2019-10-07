@@ -57,6 +57,38 @@ namespace DAO
             cmd.ExecuteNonQuery();
         }
 
+        public void AddBook(BookBE bookBE)
+        {
+            OracleConnection conn = new OracleConnection(oradb);
+            conn.Open();
+
+            StringBuilder sb = new StringBuilder();
+            sb.Append("INSERT INTO BOOKS");
+            sb.Append("(ID, TITLE, AUTHOR, GENRE)");
+            sb.Append("VALUES");
+            sb.Append($"(SQ_BOOKS.NEXTVAL, '{bookBE.Title}', '{bookBE.Author}', {(int)bookBE.Genre})");
+
+            OracleCommand cmd = new OracleCommand(sb.ToString(), conn);
+            cmd.CommandType = CommandType.Text;
+
+            cmd.ExecuteNonQuery();
+        }
+
+        public void DeleteBook(BookBE bookBE)
+        {
+            OracleConnection conn = new OracleConnection(oradb);
+            conn.Open();
+
+            StringBuilder sb = new StringBuilder();
+            sb.Append("DELETE FROM BOOKS");
+            sb.Append($" WHERE ID = {bookBE.Id}");
+
+            OracleCommand cmd = new OracleCommand(sb.ToString(), conn);
+            cmd.CommandType = CommandType.Text;
+
+            cmd.ExecuteNonQuery();
+        }
+
         public BookBE GetBookById(int id)
         {
             OracleConnection conn = new OracleConnection(oradb);
