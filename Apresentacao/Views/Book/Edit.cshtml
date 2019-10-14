@@ -35,18 +35,22 @@
                 <input hidden name="Id" value="@Model.Id" />
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput2">TITLE</label>                
-                <input type="text" class="form-control" id="Title" name="Title" placeholder= "Title" value="@Model.Title">
+                <label for="formGroupExampleInput2">TITLE</label>
+                <input type="text" pattern="[A-Za-z_ ]{1,50}" maxlength="50" value="@Model.Title" class="form-control" id="Title" name="Title" placeholder="Title" required
+                       oninvalid="this.setCustomValidity('Enter A Valide Book Author Here')"
+                       oninput="this.setCustomValidity('')"  /> 
             </div>
             <div class="form-group">
                 <label for="formGroupExampleInput2">AUTHOR</label>
-                <input type="text" class="form-control" id="Author" name="Author" placeholder="Author" value="@Model.Author">
+                <input type="text" pattern="[A-Za-z_ ]{3,70}" maxlength="70" value="@Model.Author" class="form-control" id="Author" name="Author" placeholder="Author" required
+                       oninvalid="this.setCustomValidity('Enter A Valide Book Author Here')"
+                       oninput="this.setCustomValidity('')"  /> 
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput2">GENRE</label>
-                <input type="text" class="form-control" id="Genre" name="Genre" placeholder="Genre" value="@Model.Genre">
+                <label for="formGroupExampleInput2"> GENRE</label>
+                 @Html.DropDownListFor(model => model.Genre, (IEnumerable<SelectListItem>) ViewBag.EnumGenreList)
             </div>
-            <button type="submit" class="btn btn-warning">Submit</button>
+            <button type="submit" class="btn btn-warning">Submit</button> 
         </form>
     </div>
 </body>

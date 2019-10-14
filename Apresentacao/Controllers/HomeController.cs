@@ -18,7 +18,7 @@ namespace Apresentacao.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Who_Are_We()
         {
             return View();
         }

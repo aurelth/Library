@@ -172,6 +172,7 @@
     <Content Include="Views\Book\Book.cshtml" />
     <Content Include="Views\Book\Delete.cshtml" />
     <Content Include="Views\Book\Add.cshtml" />
+    <Content Include="Views\Home\Who_Are_We.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -191,6 +192,10 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AMBEV.AS.Utils\AMBEV.AS.Utils.csproj">
+      <Project>{82ad31e4-2c19-490b-b6ab-afb1f9278a37}</Project>
+      <Name>AMBEV.AS.Utils</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BO\BO.csproj">
       <Project>{99d6ef2b-b1af-42de-a152-d27c6d9efac9}</Project>
       <Name>BO</Name>

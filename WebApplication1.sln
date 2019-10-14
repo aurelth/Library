@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apresentacao", "Apresentaca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{6B070998-F60C-4FD4-966F-CDD553D54E16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMBEV.AS.Utils", "AMBEV.AS.Utils\AMBEV.AS.Utils.csproj", "{82AD31E4-2C19-490B-B6AB-AFB1F9278A37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{6B070998-F60C-4FD4-966F-CDD553D54E16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B070998-F60C-4FD4-966F-CDD553D54E16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B070998-F60C-4FD4-966F-CDD553D54E16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82AD31E4-2C19-490B-B6AB-AFB1F9278A37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82AD31E4-2C19-490B-B6AB-AFB1F9278A37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82AD31E4-2C19-490B-B6AB-AFB1F9278A37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82AD31E4-2C19-490B-B6AB-AFB1F9278A37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

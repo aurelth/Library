@@ -1,4 +1,4 @@
-﻿using Shared.Enums;
+﻿using AMBEV.AS.Utils.Enum;
 
 namespace Entities
 {

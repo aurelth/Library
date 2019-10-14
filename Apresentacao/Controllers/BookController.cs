@@ -1,10 +1,9 @@
 ﻿using BO;
 using Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
+using System.Linq;
+using AMBEV.AS.Utils.Tools;
+using AMBEV.AS.Utils.Enum;
 
 namespace Apresentacao.Controllers
 {
@@ -29,7 +28,7 @@ namespace Apresentacao.Controllers
         {
             BookBO bookBO = new BookBO();
             var book = bookBO.GetBookById(id);
-
+            ViewBag.EnumGenreList = new SelectList(EnumHelper.GetDictionary<GenreEnum>(), "Key", "Value");
             return View("Edit", book);
         }
 
@@ -41,7 +40,9 @@ namespace Apresentacao.Controllers
         }
 
         public ActionResult OpenAdd()
-        {            
+        {
+            ViewBag.EnumGenreList = new SelectList(EnumHelper.GetDictionary<GenreEnum>(), "Key", "Value");
+
             return View("Add");
         }
 

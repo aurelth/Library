@@ -5,7 +5,7 @@
 <title>Books List</title>
 <style>
     html body {
-        background-color: #10AE8F;
+        background-color:#138D75;
         padding: 0;
         font-style: italic;
         font-family: sans-serif;
@@ -15,13 +15,13 @@
     html h1 {
         font-style: italic;
         font-family: sans-serif;
-        color: #17202A;
+        color:#17202A;
         font-weight: bold;
         text-decoration: underline
     }
 </style>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<div>
+<div class="container-fluid">
     <h1>Books List</h1>
 
     @foreach (var book in ViewBag.BooksList)
@@ -35,8 +35,8 @@
         <div class="btn-group btn-group-sm">
             @Html.ActionLink("Edit", "OpenEdit", new { id = book.Id }, new { @class = "btn btn-info" })
             @Html.ActionLink("Delete", "Delete", new { id = book.Id }, new { @class = "btn btn-danger" })
-            @Html.ActionLink("Borrow", "Borrow", new { id = book.Id }, new { @class = "btn btn-secondary" })
-            @Html.ActionLink("Book", "Book", new { id = book.Id }, new { @class = "btn btn-primary" })
+            @*@Html.ActionLink("Borrow", "Borrow", new { id = book.Id }, new { @class = "btn btn-secondary" })
+            @Html.ActionLink("Book", "Book", new { id = book.Id }, new { @class = "btn btn-primary" })*@
         </div>
     }
 

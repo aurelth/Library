@@ -47,6 +47,10 @@
     <Compile Include="RegionBE.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AMBEV.AS.Utils\AMBEV.AS.Utils.csproj">
+      <Project>{82ad31e4-2c19-490b-b6ab-afb1f9278a37}</Project>
+      <Name>AMBEV.AS.Utils</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Shared\Shared.csproj">
       <Project>{6b070998-f60c-4fd4-966f-cdd553d54e16}</Project>
       <Name>Shared</Name>

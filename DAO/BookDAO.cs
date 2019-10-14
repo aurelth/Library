@@ -1,9 +1,9 @@
 ﻿using Entities;
-using Shared.Enums;
 using System.Collections.Generic;
 using System.Data;
 using Oracle.DataAccess.Client;
 using System.Text;
+using AMBEV.AS.Utils.Enum;
 
 namespace DAO
 {
@@ -15,7 +15,7 @@ namespace DAO
             OracleConnection conn = new OracleConnection(oradb);
             conn.Open();
 
-            string sql = "SELECT * FROM BOOKS ORDER BY TITLE ASC";
+            string sql = "SELECT * FROM BOOKS ORDER BY UPPER(TITLE)";
 
             OracleCommand cmd = new OracleCommand(sql, conn);
             cmd.CommandType = CommandType.Text;
@@ -52,7 +52,7 @@ namespace DAO
             sb.Append($" WHERE ID = {bookBE.Id}");
 
             OracleCommand cmd = new OracleCommand(sb.ToString(), conn);
-         cmd.CommandType = CommandType.Text;
+            cmd.CommandType = CommandType.Text;
 
             cmd.ExecuteNonQuery();
         }
