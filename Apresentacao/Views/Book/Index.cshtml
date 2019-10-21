@@ -5,7 +5,7 @@
 <title>Books List</title>
 <style>
     html body {
-        background-color:#138D75;
+        background-color:#5499C7;
         padding: 0;
         font-style: italic;
         font-family: sans-serif;
@@ -35,8 +35,8 @@
         <div class="btn-group btn-group-sm">
             @Html.ActionLink("Edit", "OpenEdit", new { id = book.Id }, new { @class = "btn btn-info" })
             @Html.ActionLink("Delete", "Delete", new { id = book.Id }, new { @class = "btn btn-danger" })
-            @*@Html.ActionLink("Borrow", "Borrow", new { id = book.Id }, new { @class = "btn btn-secondary" })
-            @Html.ActionLink("Book", "Book", new { id = book.Id }, new { @class = "btn btn-primary" })*@
+            @Html.ActionLink("Book", "Book", new { bookId = book.Id }, new { @class = "btn btn-primary" })
+            @*@Html.ActionLink("Borrow", "Borrow", new { id = book.Id }, new { @class = "btn btn-secondary" })*@
         </div>
     }
 

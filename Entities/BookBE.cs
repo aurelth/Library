@@ -1,4 +1,5 @@
 ﻿using AMBEV.AS.Utils.Enum;
+using Shared.Enums;
 
 namespace Entities
 {
@@ -8,5 +9,6 @@ namespace Entities
         public string Title { get; set; }
         public string Author { get; set; }
         public GenreEnum Genre { get; set; }
+        public StatusEnum Status { get; set; }
     }
 }

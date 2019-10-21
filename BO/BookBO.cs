@@ -21,6 +21,7 @@ namespace BO
         public void DeleteBook(BookBE bookBE)
             => BookDAO.GetInstance().DeleteBook(bookBE);
 
-
+        public void AlterBookStatus(BookBE bookBE)
+            => BookDAO.GetInstance().AlterBookStatus(bookBE);
     }
 }

@@ -4,12 +4,12 @@ using System.Data;
 using Oracle.DataAccess.Client;
 using System.Text;
 using AMBEV.AS.Utils.Enum;
+using System;
 
 namespace DAO
 {
     public class BookDAO : BaseDAO<BookDAO>
     {
-
         public List<BookBE> GetAllBooks()
         {
             OracleConnection conn = new OracleConnection(oradb);
@@ -57,6 +57,22 @@ namespace DAO
             cmd.ExecuteNonQuery();
         }
 
+        public void AlterBookStatus(BookBE bookBE)
+        {
+            OracleConnection conn = new OracleConnection(oradb);
+            conn.Open();
+
+            StringBuilder sb = new StringBuilder();
+            sb.Append("UPDATE BOOKS");
+            sb.Append($" SET STATUS = {bookBE.Status}");
+            sb.Append($" WHERE ID = {bookBE.Id} ");
+
+            OracleCommand cmd = new OracleCommand(sb.ToString(), conn);
+            cmd.CommandType = CommandType.Text;
+
+            cmd.ExecuteNonQuery();
+        }
+
         public void AddBook(BookBE bookBE)
         {
             OracleConnection conn = new OracleConnection(oradb);
@@ -64,7 +80,7 @@ namespace DAO
 
             StringBuilder sb = new StringBuilder();
             sb.Append("INSERT INTO BOOKS");
-            sb.Append("(ID, TITLE, AUTHOR, GENRE)");
+            sb.Append("(ID, TITLE, AUTHOR, GENRE) ");
             sb.Append("VALUES");
             sb.Append($"(SQ_BOOKS.NEXTVAL, '{bookBE.Title}', '{bookBE.Author}', {(int)bookBE.Genre})");
 
@@ -87,8 +103,8 @@ namespace DAO
             cmd.CommandType = CommandType.Text;
 
             cmd.ExecuteNonQuery();
-        }
-
+        }        
+        
         public BookBE GetBookById(int id)
         {
             OracleConnection conn = new OracleConnection(oradb);
@@ -116,8 +132,6 @@ namespace DAO
 
             return book;
         }
-    }
-
-    
+    }    
 }
 

@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDAO.cs" />
+    <Compile Include="BookingDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BookDAO.cs" />
   </ItemGroup>

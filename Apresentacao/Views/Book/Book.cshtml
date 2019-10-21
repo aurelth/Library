@@ -1,7 +1,60 @@
-﻿
+﻿@model Entities.BookingBE
 @{
-    ViewBag.Title = "Book";
+     ViewBag.Title = "Book";
 }
+<title>Book</title>
+<style>
+    html body {
+        background-color:#E9967A;
+        padding: 0;
+        font-style: italic;
+        font-family: sans-serif;
+        font-weight: bold;
+    }
 
-<h2>Book - Waiting For Implementation</h2>
+    h1 {
+        font-style: italic;
+        font-family: sans-serif;
+        color: #000000;
+        font-weight: bold;
+    }
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<body>
+    <div class="container">
+        <h1>Book your book here</h1>
+        <form method="post" action="@Url.Action("UpdateOrInsertBooking", "Book")">
+            <div class="form-group">
+                <input hidden name="Id" value="@Model.BookId" />
+            </div>           
+            <div class="form-group">
+                <label for="formGroupExampleInput2">CPF</label>
+                <input type="text" pattern="[0-9]{11}" maxlength="50" class="form-control" id="Cpf" value="@Model.CpfPerson" name="Title" placeholder="CPF" required
+                       oninvalid="this.setCustomValidity('Enter A Valide CPF Here')"
+                       oninput="this.setCustomValidity('')" />
+            </div>
+
+            <div class="form-group">
+                <label for="formGroupExampleInput2">NAME </label>
+                <input type="text" pattern="[A-Za-z_ ]{3,70}" maxlength="70" class="form-control" id="Name" value="@Model.NamePerson" name="Name" placeholder="NAME" required
+                       oninvalid="this.setCustomValidity('Enter A Valide Name Here')"
+                       oninput="this.setCustomValidity('')" />
+            </div>
+
+            <div class="form-group">
+                <label for="formGroupExampleInput2">PHONE</label>
+                <input type="text" pattern="[0-9]{8,20}" maxlength="20" class="form-control" id="Phone" value="@Model.Phone" name="Phone" placeholder="PHONE" required
+                       oninvalid="this.setCustomValidity('Enter A Valide Phone Number Here')"
+                       oninput="this.setCustomValidity('')" />
+            </div>
+
+            <div class="form-group">
+                <label for="formGroupExampleInput2">BOOKING DATE</label>
+                <input type="text" pattern="[0-9]" class="form-control" id="Date" value="@Model.BookingDate" name="Date" placeholder="BOOKING DATE" readonly />
+            </div>            
+            <button type="submit" class="btn btn-warning">Submit</button>
+        </form>
+    </div>
+</body>
+
 
