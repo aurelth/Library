@@ -1,10 +1,9 @@
-﻿using Entities;
+﻿using AMBEV.AS.Utils.Enum;
+using Entities;
+using Oracle.DataAccess.Client;
 using System.Collections.Generic;
 using System.Data;
-using Oracle.DataAccess.Client;
 using System.Text;
-using AMBEV.AS.Utils.Enum;
-using System;
 
 namespace DAO
 {

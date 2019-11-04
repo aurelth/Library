@@ -1,10 +1,9 @@
-﻿using BO;
-using Entities;
-using System.Web.Mvc;
-using System.Linq;
+﻿using AMBEV.AS.Utils.Enum;
 using AMBEV.AS.Utils.Tools;
-using AMBEV.AS.Utils.Enum;
+using BO;
+using Entities;
 using Shared.Enums;
+using System.Web.Mvc;
 
 namespace Apresentacao.Controllers
 {
@@ -68,9 +67,11 @@ namespace Apresentacao.Controllers
             var bookingBO = new BookingBO();
             var bookBO = new BookBO();
             bookingBO.UpdateOrInsertBooking(bookingBE);
-            var b = bookBO.GetBookById(bookingBE.BookId);
-            b.Status = StatusEnum.Occupied;
+            var book = bookBO.GetBookById(bookingBE.BookId);
+            book.Status = StatusEnum.Occupied;
+            bookBO.AlterBookStatus(book);
             return RedirectToAction("Index", "Book");
-        }
+        }        
     }
 }
+

@@ -1,6 +1,5 @@
 ﻿using Entities;
 using Oracle.DataAccess.Client;
-using System;
 using System.Data;
 using System.Text;
 
@@ -56,7 +55,7 @@ namespace DAO
             sb.Append(" B.BOOKING_DATE = SYSDATE ");
             sb.Append(" WHEN NOT MATCHED THEN ");
             sb.Append(" INSERT(CPF_PERSON, NAME_PERSON, PHONE, BOOK_ID, BOOKING_DATE) ");
-            sb.Append(" VALUES(D.CPF_PERSON, D.NAME_PERSON, D.PHONE, D.BOOK_ID, SYSDATE); ");            
+            sb.Append(" VALUES(D.CPF_PERSON, D.NAME_PERSON, D.PHONE, D.BOOK_ID, SYSDATE); ");
 
             OracleCommand cmd = new OracleCommand(sb.ToString(), conn)
             {
